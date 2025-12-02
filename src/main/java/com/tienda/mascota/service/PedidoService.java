@@ -23,7 +23,7 @@ public class PedidoService {
     
     @Transactional
     public Pedido crearPedido(Long usuarioId, List<Map<String, Object>> items, 
-                             String direccionEnvio, String metodoPago) {
+                            String direccionEnvio, String metodoPago) {
         
         Usuario usuario = usuarioRepository.findById(usuarioId)
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
